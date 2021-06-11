@@ -2,7 +2,7 @@
  * quick.db definitions
  */
 
-declare module 'quick.db' {
+declare module 'krozzzdb' {
     export interface Options {
         target?: string | null;
         table?: string;
