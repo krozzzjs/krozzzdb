@@ -1,61 +1,60 @@
-## Quick.db
+## krozzzdb
 
-**Documentation:** [quickdb.js.org](https://quickdb.js.org) <br>
-**Support:** [discord.gg/plexidev](https://discord.gg/plexidev) <br>
-**NPM:** [npmjs.com/quick.db](https://www.npmjs.com/package/quick.db)
+**Documentación:** [PROXIMAMENTE](https://dsc.gg/lunarserv) <br>
+**Soporte:** [dsc.gg/lunarstudios](/https://dsc.gg/lunarstudios) <br>
+**NPM:** [npmjs.com/krozzzdb](https://www.npmjs.com/package/krozzzdb)
 
-Quick.db is an open-source package meant to provide an easy way for beginners and people of all levels to access & store data in a low to medium volume environment. All data is stored persistently via [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3) and comes way various other quality-of-life features.
+KrozzzDB es una database de codigo abierto, en base de QuickDB. Todos los datos se guardan via [sqlite](https://github.com/JoshuaWise/better-sqlite3).
+> **Almacenamiento** - El almacenamiento nunca se perderá, a caso que borres el archivo de `krozzz.sqlite`.
 
-- **Persistent Storage** - Data doesn't disappear through restarts
-- **Works out of the box** - No need to set up a database server, all the data is stored locally in the same project
-- **Beginner Friendly** - Originally created for use in tutorials, the documentation is straightforward and jargon-free
-- & more...
+> **Funciona de inmediato**: No es necesario configurar un servidor de base de datos como en Mongoose, todos los datos se almacenan localmente en el mismo proyecto.
 
-## Example
+> **Funcionalidad**: Esta ddatabase esta hecha para que no te lies con las cosas, es bien simple!
 
-[**Code Sandbox Demo**](https://codesandbox.io/s/quickdb-demo-7ti8z?file=/src/index.js)
+> **Origen**: Originariamente se creó para el bot `Lunar`, pero luego se decidió hacerla publica.
+
+## Ejemplos
+
 ```js
-const quickdb = require('quick.db');
+const krozzz = require('krozzzdb');
 
-const db = quickdb('./json.sqlite');
+const db = krozzz('./krozzz.sqlite');
 
-// Setting an object in the database:
-db.set('userInfo', { difficulty: 'Easy' })
-// -> { difficulty: 'Easy' }
+// Establecer un objeto
+db.set('userInfo', { dificultad: 'Facil' })
+// Se guardaría como - { dificultad: 'Facil' }
 
-// Pushing an element to an array (that doesn't exist yet) in an object:
-db.push('userInfo.items', 'Sword')
-// -> { difficulty: 'Easy', items: ['Sword'] }
+// Empujar un elemento a una matriz (que aún no existe) en un objeto:
+db.push('userInfo.items', 'Espada')
+// Se guarda como - { dificultad: 'Facil', items: ['Espada'] }
 
-// Adding to a number (that doesn't exist yet) in an object:
+// Añadir un numero (que aún no existe) en un objeto:
 db.add('userInfo.balance', 500)
-// -> { difficulty: 'Easy', items: ['Sword'], balance: 500 }
+// Se guarda como - { dificultad: 'Facil', items: ['Espada'], balance: 500 }
 
-// Repeating previous examples:
-db.push('userInfo.items', 'Watch')
-// -> { difficulty: 'Easy', items: ['Sword', 'Watch'], balance: 500 }
+// Repitiendo los ejemplos anteriores:
+db.push('userInfo.items', 'Reloj')
+// Se guarda como - { dificultad: 'Facil', items: ['Espada', 'Reloj'], balance: 500 }
 db.add('userInfo.balance', 500)
-// -> { difficulty: 'Easy', items: ['Sword', 'Watch'], balance: 1000 }
+// Se guarda como -> { dificultad: 'Facil', items: ['Espada', 'Reloj'], balance: 1000 }
 
-// Fetching individual properties
+// Obteniendo propiedades individuales
 db.get('userInfo.balance') // -> 1000
-db.get('userInfo.items') // ['Sword', 'Watch']
+db.get('userInfo.items') // ['Espada', 'Reloj']
 ```
 
-## Installation
-
-*If you're having troubles installing, please follow [this troubleshooting guide](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/troubleshooting.md).*
+## Instalación
 
 **Linux & Windows**
-- `npm i quick.db`
+- `npm i krozzzdb`
 
-***Note:** Windows users may need to do additional steps [listed here](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/troubleshooting.md).*
+***Note:** Es posible que los usuarios de Windows deban realizar pasos adicionales [listed here](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/troubleshooting.md).*
 
 **Mac**
-1. **Install:** XCode
-2. **Run:** `npm i -g node-gyp` in terminal
-3. **Run:** `node-gyp --python /path/to/python2.7` (skip this step if you didn't install python 3.x)
-4. **Run:** `npm i quick.db`
+1. **Instalar:** XCode
+2. Debes poner `npm i -g node-gyp` en la terminal
+3. Luego `node-gyp --python /path/to/python2.7` (si ya tienes Python 3.x, ignora este paso)
+4. Y por ultimo ponemos `npm i krozzzdb`
 
-## Support
-I work on these projects in my spare time, if you'd like to support me, you can do so via [Patreon! ❤️](https://www.patreon.com/lorencerri)
+## Apoyanos
+Trabajo en estos proyectos en mi tiempo libre, si quieres apoyarme, puedes hacerlo a través de [Patreon!](https://www.patreon.com/lunarthebot)
