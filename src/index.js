@@ -5,7 +5,7 @@ module.exports = function(file) {
     let db;
 
     // Create Database Under Conditions
-    if (!db) db = new Database(file || "./json.sqlite");
+    if (!db) db = new Database(file || "./krozzz.sqlite");
 
     // Declare Methods
     var methods = {
