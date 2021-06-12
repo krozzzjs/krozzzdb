@@ -1,7 +1,7 @@
 // Require Package
-let quickdb = require("../index.js");
+let krozzz = require("../index.js");
 
-let db = quickdb();
+let db = krozzz();
 
 // Methods (everything should be true)
 console.log("Adding Numbers:", typeof db.add("myNumber", 100) === "number");
