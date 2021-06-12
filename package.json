@@ -1,6 +1,6 @@
 {
-    "name": "quick.db",
-    "version": "8.0.0",
+    "name": "krozzzdb",
+    "version": "0.1.5",
     "description": "An easy, non-locking, persistent better-sqlite3 wrapper designed to be easy to setup & utilize",
     "main": "index.js",
     "dependencies": {
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TrueXPixels/quick.db.git"
+        "url": "git+https://github.com/krozzzjs/krozzzdb.git"
     },
     "keywords": [
         "database",
@@ -27,7 +27,6 @@
     "author": "TrueXPixels",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/TrueXPixels/quick.db/issues"
-    },
-    "homepage": "https://quickdb.js.org"
+        "url": "https://github.com/krozzzjs/krozzzdb"
+    }
 }
